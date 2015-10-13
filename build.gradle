@@ -1,7 +1,22 @@
-apply plugin: 'java'
+apply plugin: 'application'
 
 sourceCompatibility = 1.8
 
+project.ext {
+    configPath = "$rootProject.projectDir/config/"
+    dropwizardVersion = '0.8.2'
+}
+
 repositories {
     mavenCentral()
+}
+
+dependencies {
+    compile group: 'io.dropwizard', name: 'dropwizard-core', version: dropwizardVersion
+}
+
+mainClassName = "com.karollotkowski.cleancode.CleanCodeApplication"
+
+run {
+    args 'server', configPath + 'app_config.yml'
 }
