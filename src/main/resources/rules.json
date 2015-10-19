@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Multiple programming languages",
+    "description": "Try to keep only one programming language syntax in the source files. Do not mix multiple languages in one file, e.g. Java + HTML."
+  },
+  {
+    "title": "Dead code",
+    "description": "Do not keep unused or commented code. At any time you can back to this code in repository."
+  }
+]
